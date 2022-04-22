@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>京东登录1</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/login.css">
+    <script src="./js/jquery_306_min.js"></script>
+    <style>
+        form {
+            margin-top: 100px;
+            text-align: center;
+            line-height: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#">
+        用户名： <input type="text" /> <br/> 密码： <input type="password" /><br/>
+        <input type="submit" value='登录'>
+    </form>
+
+    <ul>
+        <li>这是原来的事件</li>
+    </ul>
+</body>
+<script>
+    $(function() {
+        var arr = [1, 2, 3, 4, "pink"];
+        var obj = {
+            uname: "pink",
+            age: 18,
+            add: "地球"
+        };
+        $.each(obj, function(index, Ele) {
+            console.log(index);
+            console.log(Ele);
+        })
+
+        var li = $("<li>我是后来创建的li</li>");
+        $("ul").append(li);
+        $("ul").click(function() {
+            alert('我被点击了');
+        })
+
+    })
+
+    var targetObj = {
+        id: 0,
+        age: 18,
+        shenGao: 172,
+        msg: {
+            say: 18
+        }
+    };
+    var obj = {
+        id: 1,
+        uname: "red",
+        msg: {
+            say: 16
+        }
+    }
+    $.extend(targetObj, obj);
+    console.log(targetObj);
+</script>
+
+</html>
